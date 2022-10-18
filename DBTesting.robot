@@ -3,7 +3,7 @@ Documentation  Database Testing in Robot Framework
 Library  DatabaseLibrary
 
 *** Variables ***
-${DBName}  sakila
+${DBName}  fedex
 ${DBUser}  shankita
 ${DBPassword}  shankita
 ${DBHost}  localhost
@@ -13,7 +13,7 @@ ${DBPort}  3306
 Verify Successful creation of Table
     [documentation]  This test case verifies that user is able to create a table successfully
     Connect DB
-    ${output}=  Execute SQL String  CREATE TABLE Persons (PersonID int, FirstName varchar(255), Address varchar(255), City varchar(255));
+    ${output}=  Execute SQL String  CREATE TABLE Emplyee (PersonID int, FirstName varchar(255), Address varchar(255), City varchar(255));
     Should Be Equal As Strings  ${output}  None
 
 Verify Data Insertion in Table
